@@ -17,18 +17,21 @@ export default function LoginAcc() {
 
       <View style={style.form}>
         <TextInput style={style.inputPassword} />
-
-        <TouchableOpacity style={style.buttonLogin}>
+        <View style={style.buttonformLogin}>
+         <TouchableOpacity style={style.buttonLogin}>
           <Text style={style.buttonLoginText}>ĐĂNG NHẬP</Text>
-        </TouchableOpacity>
-
-        <TouchableOpacity style={style.buttonAction}>
+         </TouchableOpacity>
+        </View>
+        
+        <View style={style.buttonformAction}>
+         <TouchableOpacity style={style.buttonAction}>
           <Text style={style.buttonActionText}>QUÊN MẬT KHẨU</Text>
-        </TouchableOpacity>
-
-        <TouchableOpacity style={style.buttonAction}>
+         </TouchableOpacity>
+        
+         <TouchableOpacity style={style.buttonAction}>
           <Text style={style.buttonActionText}>THOÁT TÀI KHOẢN</Text>
-        </TouchableOpacity>
+         </TouchableOpacity>
+        </View>            
       </View>
 
       <View style={style.action}></View>
@@ -67,6 +70,8 @@ const style= StyleSheet.create({
   inputPassword: {
     height: 60,
     backgroundColor: "#fff",
+    borderRadius: 25,
+    width: 300,
   },
   buttonLogin: {
     backgroundColor: "red",
@@ -75,6 +80,7 @@ const style= StyleSheet.create({
     borderRadius: 25,
     justifyContent: "center",
     alignItems: "center",
+    width: 300,
   },
   buttonLoginText: {
     ...TEXT
@@ -82,5 +88,13 @@ const style= StyleSheet.create({
   action: {
     flexDirection: "row",
     justifyContent: "space-between",
+  },
+  buttonformAction: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    marginTop: 15,
+  },
+  form: {
+    alignItems: "center",
   },
 });
