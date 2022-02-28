@@ -34,7 +34,7 @@ export default function LoginAcc() {
       <View style={style.action}></View>
     </SafeAreaView>
   );
-}
+};
 
 const TEXT= {
   color: "#fff",
@@ -82,5 +82,5 @@ const style= StyleSheet.create({
   action: {
     flexDirection: "row",
     justifyContent: "space-between",
-  }
+  },
 });
