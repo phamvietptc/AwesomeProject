@@ -16,8 +16,8 @@ export default function LoginAcc() {
       </View>
 
       <View style={style.form}>
-        <TextInput style={style.inputPassword} />
         <View style={style.buttonformLogin}>
+         <TextInput style={style.inputPassword} />
          <TouchableOpacity style={style.buttonLogin}>
           <Text style={style.buttonLoginText}>ĐĂNG NHẬP</Text>
          </TouchableOpacity>
@@ -85,16 +85,15 @@ const style= StyleSheet.create({
   buttonLoginText: {
     ...TEXT
   },
-  action: {
-    flexDirection: "row",
-    justifyContent: "space-between",
-  },
   buttonformAction: {
     flexDirection: "row",
-    justifyContent: "space-between",
+    justifyContent: "space-around",
     marginTop: 15,
   },
-  form: {
+  buttonformLogin: {
     alignItems: "center",
   },
+  buttonActionText: {
+    color: "#fff",
+  }
 });
