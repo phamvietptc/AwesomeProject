@@ -17,7 +17,15 @@ export default function LoginAcc() {
 
       <View style={style.form}>
         <View style={style.buttonformLogin}>
-         <TextInput style={style.inputPassword} maxLength={10} secureTextEntry={true}/>
+         <TextInput 
+            style={style.inputPassword}
+            keyboardType="numeric"
+            maxLength={8}
+            secureTextEntry={true}
+            autoFocus={true}
+            placeholder="Nhập mật khẩu"
+            placeholderTextColor="#929292"
+         />
          <TouchableOpacity style={style.buttonLogin}>
           <Text style={style.buttonLoginText}>ĐĂNG NHẬP</Text>
          </TouchableOpacity>
@@ -97,5 +105,8 @@ const style= StyleSheet.create({
   },
   buttonActionText: {
     color: "#fff",
+  },
+  form: {
+    marginTop: 20,
   }
 });
