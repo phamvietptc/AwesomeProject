@@ -71,7 +71,7 @@ const style= StyleSheet.create({
     height: 60,
     backgroundColor: "#fff",
     borderRadius: 25,
-    width: 300,
+    width: 320,
   },
   buttonLogin: {
     backgroundColor: "red",
@@ -80,7 +80,7 @@ const style= StyleSheet.create({
     borderRadius: 25,
     justifyContent: "center",
     alignItems: "center",
-    width: 300,
+    width: 320,
   },
   buttonLoginText: {
     ...TEXT
