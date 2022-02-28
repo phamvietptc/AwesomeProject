@@ -11,13 +11,13 @@ export default function LoginAcc() {
         <View style={style.textWrapper}>
           <Text style={style.hiText}>Xin Chào!</Text>
           <Text style={style.userText}>Pham Tuan Viet</Text>
-          <Text style={style.userText}>0000000000</Text>
+          <Text style={style.userText}>0399999999</Text>
         </View>
       </View>
 
       <View style={style.form}>
         <View style={style.buttonformLogin}>
-         <TextInput style={style.inputPassword} />
+         <TextInput style={style.inputPassword} maxLength={10} secureTextEntry={true}/>
          <TouchableOpacity style={style.buttonLogin}>
           <Text style={style.buttonLoginText}>ĐĂNG NHẬP</Text>
          </TouchableOpacity>
@@ -47,24 +47,24 @@ const TEXT= {
 const style= StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#b0006d",
+    backgroundColor: "#b0005d",
     paddingTop: Constant.statusBarHeight,
   },
   content: {
-
+    
   },
   textWrapper: {
-
+    
   },
   hiText: {
     ...TEXT,
-    fontSize: 20,
+    fontSize: 25,
     lineHeight: 50,
     fontWeight: "bold",
   },
   userText: {
     ...TEXT,
-    fontSize: 16,
+    fontSize: 18,
     lineHeight: 30,
   },
   inputPassword: {
@@ -72,6 +72,8 @@ const style= StyleSheet.create({
     backgroundColor: "#fff",
     borderRadius: 25,
     width: 320,
+    textAlign: "center",
+    fontSize: 25,
   },
   buttonLogin: {
     backgroundColor: "red",
