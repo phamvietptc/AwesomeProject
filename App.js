@@ -1,112 +1,100 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- * @flow strict-local
- */
+import React from "react";
+import { SafeAreaView, StyleSheet, Text, TextInput, Touchable, TouchableOpacity, View } from "react-native";
+import Constant from "react-native";
+import { StatusBar } from "react-native";
 
-import React from 'react';
-import type {Node} from 'react';
-import {
-  SafeAreaView,
-  ScrollView,
-  StatusBar,
-  StyleSheet,
-  Text,
-  useColorScheme,
-  View,
-} from 'react-native';
-
-import {
-  Colors,
-  DebugInstructions,
-  Header,
-  LearnMoreLinks,
-  ReloadInstructions,
-} from 'react-native/Libraries/NewAppScreen';
-
-const Section = ({children, title}): Node => {
-  const isDarkMode = useColorScheme() === 'dark';
+export default function LoginAcc() {
   return (
-    <View style={styles.sectionContainer}>
-      <Text
-        style={[
-          styles.sectionTitle,
-          {
-            color: isDarkMode ? Colors.white : Colors.black,
-          },
-        ]}>
-        {title}
-      </Text>
-      <Text
-        style={[
-          styles.sectionDescription,
-          {
-            color: isDarkMode ? Colors.light : Colors.dark,
-          },
-        ]}>
-        {children}
-      </Text>
-    </View>
-  );
-};
-
-const App: () => Node = () => {
-  const isDarkMode = useColorScheme() === 'dark';
-
-  const backgroundStyle = {
-    backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
-  };
-
-  return (
-    <SafeAreaView style={backgroundStyle}>
-      <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
-      <ScrollView
-        contentInsetAdjustmentBehavior="automatic"
-        style={backgroundStyle}>
-        <Header />
-        <View
-          style={{
-            backgroundColor: isDarkMode ? Colors.black : Colors.white,
-          }}>
-          <Section title="Step One">
-            Edit <Text style={styles.highlight}>App.js</Text> to change this
-            screen and then come back to see your edits.
-          </Section>
-          <Section title="See Your Changes">
-            <ReloadInstructions />
-          </Section>
-          <Section title="Debug">
-            <DebugInstructions />
-          </Section>
-          <Section title="Learn More">
-            Read the docs to discover what to do next:
-          </Section>
-          <LearnMoreLinks />
+    <SafeAreaView style={style.container}>
+      <StatusBar style="light" />
+      <View style={style.content}>
+        <View style={style.textWrapper}>
+          <Text style={style.hiText}>Xin Chào!</Text>
+          <Text style={style.userText}>Pham Tuan Viet</Text>
+          <Text style={style.userText}>0000000000</Text>
         </View>
-      </ScrollView>
+      </View>
+
+      <View style={style.form}>
+        <TextInput style={style.inputPassword} />
+        <View style={style.buttonformLogin}>
+         <TouchableOpacity style={style.buttonLogin}>
+          <Text style={style.buttonLoginText}>ĐĂNG NHẬP</Text>
+         </TouchableOpacity>
+        </View>
+        
+        <View style={style.buttonformAction}>
+         <TouchableOpacity style={style.buttonAction}>
+          <Text style={style.buttonActionText}>QUÊN MẬT KHẨU</Text>
+         </TouchableOpacity>
+        
+         <TouchableOpacity style={style.buttonAction}>
+          <Text style={style.buttonActionText}>THOÁT TÀI KHOẢN</Text>
+         </TouchableOpacity>
+        </View>            
+      </View>
+
+      <View style={style.action}></View>
     </SafeAreaView>
   );
 };
 
-const styles = StyleSheet.create({
-  sectionContainer: {
-    marginTop: 32,
-    paddingHorizontal: 24,
+const TEXT= {
+  color: "#fff",
+  textAlign: "center",
+};
+
+const style= StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: "#b0006d",
+    paddingTop: Constant.statusBarHeight,
   },
-  sectionTitle: {
-    fontSize: 24,
-    fontWeight: '600',
+  content: {
+
   },
-  sectionDescription: {
-    marginTop: 8,
-    fontSize: 18,
-    fontWeight: '400',
+  textWrapper: {
+
   },
-  highlight: {
-    fontWeight: '700',
+  hiText: {
+    ...TEXT,
+    fontSize: 20,
+    lineHeight: 50,
+    fontWeight: "bold",
+  },
+  userText: {
+    ...TEXT,
+    fontSize: 16,
+    lineHeight: 30,
+  },
+  inputPassword: {
+    height: 60,
+    backgroundColor: "#fff",
+    borderRadius: 25,
+    width: 320,
+  },
+  buttonLogin: {
+    backgroundColor: "red",
+    height: 50,
+    marginTop: 15,
+    borderRadius: 25,
+    justifyContent: "center",
+    alignItems: "center",
+    width: 320,
+  },
+  buttonLoginText: {
+    ...TEXT
+  },
+  action: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+  },
+  buttonformAction: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    marginTop: 15,
+  },
+  form: {
+    alignItems: "center",
   },
 });
-
-export default App;
