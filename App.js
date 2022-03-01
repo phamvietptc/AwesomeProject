@@ -2,6 +2,7 @@ import React from "react";
 import { SafeAreaView, StyleSheet, Text, TextInput, Touchable, TouchableOpacity, View } from "react-native";
 import Constant from "react-native";
 import { StatusBar } from "react-native";
+import { Icon } from "react-native-vector-icons/FontAwesome";
 
 export default function LoginAcc() {
   return (
@@ -17,15 +18,19 @@ export default function LoginAcc() {
 
       <View style={style.form}>
         <View style={style.buttonformLogin}>
-         <TextInput 
-            style={style.inputPassword}
-            keyboardType="numeric"
-            maxLength={8}
-            secureTextEntry={true}
-            autoFocus={true}
-            placeholder="Nhập mật khẩu"
-            placeholderTextColor="#929292"
-         />
+          <View>
+           <Icon name="lock" color="#eee" size={15} />      
+           <TextInput 
+             style={style.inputPassword}
+             keyboardType="numeric"
+             maxLength={8}
+             secureTextEntry={true}
+             autoFocus={true}
+             placeholder="Nhập mật khẩu"
+             placeholderTextColor="#929292"
+           />
+          </View>
+          
          <TouchableOpacity style={style.buttonLogin}>
           <Text style={style.buttonLoginText}>ĐĂNG NHẬP</Text>
          </TouchableOpacity>
@@ -108,5 +113,5 @@ const style= StyleSheet.create({
   },
   form: {
     marginTop: 20,
-  }
+  },
 });
