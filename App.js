@@ -2,7 +2,7 @@ import React from "react";
 import { SafeAreaView, StyleSheet, Text, TextInput, Touchable, TouchableOpacity, View } from "react-native";
 import Constant from "react-native";
 import { StatusBar } from "react-native";
-import { Icon } from "react-native-vector-icons/FontAwesome";
+import Icon from "react-native-vector-icons/FontAwesome";
 
 export default function LoginAcc() {
   return (
@@ -19,7 +19,13 @@ export default function LoginAcc() {
       <View style={style.form}>
         <View style={style.buttonformLogin}>
           <View>
-           <Icon name="lock" color="#eee" size={15} />      
+           <Icon size={24} color="#929292" name="lock" style={{
+              position: "absolute",
+              top: 17,
+              left: 23,
+              zIndex: 2,
+            }}/>
+
            <TextInput 
              style={style.inputPassword}
              keyboardType="numeric"
