@@ -4,57 +4,62 @@ import Constant from "react-native";
 import { StatusBar } from "react-native";
 import Icon from "react-native-vector-icons/FontAwesome";
 
+import RootComponent from "./src/screen/index";
+
 export default function LoginAcc() {
   return (
-    <SafeAreaView style={style.container}>
-      <StatusBar style="light" />
-      <View style={style.content}>
-        <View style={style.textWrapper}>
-          <Text style={style.hiText}>Xin Chào!</Text>
-          <Text style={style.userText}>Pham Tuan Viet</Text>
-          <Text style={style.userText}>0399999999</Text>
-        </View>
-      </View>
 
-      <View style={style.form}>
-        <View style={style.buttonformLogin}>
-          <View>
-           <Icon size={24} color="#929292" name="lock" style={{
-              position: "absolute",
-              top: 17,
-              left: 23,
-              zIndex: 2,
-            }}/>
+    <RootComponent />
+    
+    // <SafeAreaView style={style.container}>
+    //   <StatusBar style="light" />
+    //   <View style={style.content}>
+    //     <View style={style.textWrapper}>
+    //       <Text style={style.hiText}>Xin Chào!</Text>
+    //       <Text style={style.userText}>Pham Tuan Viet</Text>
+    //       <Text style={style.userText}>0399999999</Text>
+    //     </View>
+    //   </View>
 
-           <TextInput 
-             style={style.inputPassword}
-             keyboardType="numeric"
-             maxLength={8}
-             secureTextEntry={true}
-             autoFocus={true}
-             placeholder="Nhập mật khẩu"
-             placeholderTextColor="#929292"
-           />
-          </View>
+    //   <View style={style.form}>
+    //     <View style={style.buttonformLogin}>
+    //       <View>
+    //        <Icon size={24} color="#929292" name="lock" style={{
+    //           position: "absolute",
+    //           top: 17,
+    //           left: 23,
+    //           zIndex: 2,
+    //         }}/>
+
+    //        <TextInput 
+    //          style={style.inputPassword}
+    //          keyboardType="numeric"
+    //          maxLength={8}
+    //          secureTextEntry={true}
+    //          autoFocus={true}
+    //          placeholder="Nhập mật khẩu"
+    //          placeholderTextColor="#929292"
+    //        />
+    //       </View>
           
-         <TouchableOpacity style={style.buttonLogin}>
-          <Text style={style.buttonLoginText}>ĐĂNG NHẬP</Text>
-         </TouchableOpacity>
-        </View>
+    //      <TouchableOpacity style={style.buttonLogin}>
+    //       <Text style={style.buttonLoginText}>ĐĂNG NHẬP</Text>
+    //      </TouchableOpacity>
+    //     </View>
         
-        <View style={style.buttonformAction}>
-         <TouchableOpacity style={style.buttonAction}>
-          <Text style={style.buttonActionText}>QUÊN MẬT KHẨU</Text>
-         </TouchableOpacity>
+    //     <View style={style.buttonformAction}>
+    //      <TouchableOpacity style={style.buttonAction}>
+    //       <Text style={style.buttonActionText}>QUÊN MẬT KHẨU</Text>
+    //      </TouchableOpacity>
         
-         <TouchableOpacity style={style.buttonAction}>
-          <Text style={style.buttonActionText}>THOÁT TÀI KHOẢN</Text>
-         </TouchableOpacity>
-        </View>            
-      </View>
+    //      <TouchableOpacity style={style.buttonAction}>
+    //       <Text style={style.buttonActionText}>THOÁT TÀI KHOẢN</Text>
+    //      </TouchableOpacity>
+    //     </View>            
+    //   </View>
 
-      <View style={style.action}></View>
-    </SafeAreaView>
+    //   <View style={style.action}></View>
+    // </SafeAreaView>
   );
 };
 
