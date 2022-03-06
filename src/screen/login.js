@@ -4,7 +4,7 @@ import Icon from "react-native-vector-icons/FontAwesome";
 const windowWidth = Dimensions.get("window").width;
 const windowHeight = Dimensions.get("window").height;
 
-export default Login = () => {
+export default Login = ({navigation}) => {
     const [getPasswordvisible, setPasswordvisible] = useState(false)
     return(
         <ImageBackground style={{height: "100%", width: "100%"}} source={require("../images/background.jpg")} resizeMode="stretch">
@@ -64,7 +64,12 @@ export default Login = () => {
                     {/* Button login & register */}
                     <View style={{height: "20%", width: "100%", marginTop: 0.15*windowHeight, justifyContent: "center", alignItems: "center"}}>
                             {/* Dang nhap */}
-                            <TouchableOpacity style={{height: "30%", width: "60%", borderColor: "white", borderWidth: 1, borderRadius: 100, backgroundColor: "#fff", justifyContent: "center", alignItems: "center"}}>
+                            <TouchableOpacity 
+                                style={{height: "30%", width: "60%", borderColor: "white", borderWidth: 1, borderRadius: 100, backgroundColor: "#fff", justifyContent: "center", alignItems: "center"}}
+                                onPress={() => {
+                                    navigation.navigate("Home");
+                                }}
+                            >
                                 <Text style={{color: "black", fontSize: 20}}>ĐĂNG NHẬP</Text>
                             </TouchableOpacity>
                             {/* Dang ky */}
