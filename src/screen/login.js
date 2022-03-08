@@ -5,7 +5,8 @@ const windowWidth = Dimensions.get("window").width;
 const windowHeight = Dimensions.get("window").height;
 
 export default Login = ({navigation}) => {
-    const [getPasswordvisible, setPasswordvisible] = useState(false)
+    const [getPasswordvisible, setPasswordvisible] = useState(false);
+    const [getEmail, setEmail] = useState("");
     return(
         <ImageBackground style={{height: "100%", width: "100%"}} source={require("../images/background.jpg")} resizeMode="stretch">
             <StatusBar barStyle="light-content" />
@@ -24,7 +25,9 @@ export default Login = ({navigation}) => {
                                 borderBottomWidth: 1,
                                 textAlign: "right"
                             }}
-                                autoCapitalize="none"   
+                                autoCapitalize="none"
+                                value={getEmail}
+                                onChangeText={setEmail}  
                             />
                         </View>
                         {/* Password */}
@@ -64,10 +67,12 @@ export default Login = ({navigation}) => {
                     {/* Button login & register */}
                     <View style={{height: "20%", width: "100%", marginTop: 0.15*windowHeight, justifyContent: "center", alignItems: "center"}}>
                             {/* Dang nhap */}
-                            <TouchableOpacity 
+                            <TouchableOpacity
                                 style={{height: "30%", width: "60%", borderColor: "white", borderWidth: 1, borderRadius: 100, backgroundColor: "#fff", justifyContent: "center", alignItems: "center"}}
                                 onPress={() => {
-                                    navigation.navigate("Home");
+                                    navigation.navigate("Home", {
+                                        email: getEmail
+                                    });
                                 }}
                             >
                                 <Text style={{color: "black", fontSize: 20}}>ĐĂNG NHẬP</Text>
