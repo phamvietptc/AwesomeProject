@@ -13,14 +13,14 @@ export default Setting = ({navigation}) => {
                     }}
                 >
                     <Icon size={24} color="black" name="caretleft" />
-                    <Text style={{fontSize: 20, fontWeight: "500", marginLeft: 10}}>Back</Text>
+                    <Text style={{fontSize: 15, fontWeight: "500", marginLeft: 5}}>Back</Text>
                 </TouchableOpacity>
             </View>
 
             <View style={{flex: 1, width: "100%", justifyContent: "center", alignItems: "center"}}>
                 <Text style={{fontSize: 30}}>Setting</Text>
                 <TouchableOpacity
-                    style={{width: "50%", height: 50, borderWidth: 1, marginTop: 50, borderRadius: ""}}
+                    style={{width: "50%", height: 50, borderWidth: 1, marginTop: 50, alignItems: "center", justifyContent: "center"}}
                     onPress={() => {
                         navigation.popToTop()
                     }}

@@ -7,7 +7,7 @@ export default Home = ({route, navigation}) => {
     return (
         <SafeAreaView style={{flex: 1}}>
             {/* Header */}
-            <View style={{height: "8%", width: "100%", borderWidth: 1, flexDirection: "row"}}>
+            <View style={{height: "8%", width: "100%", borderWidth: 1, flexDirection: "row", justifyContent: "space-between", alignItems: "center"}}>
                 <TouchableOpacity
                     style={{height: "100%", aspectRatio: 1.7, borderWidth: 1, alignItems: "center"}}
                     onPress={() => {
@@ -15,7 +15,7 @@ export default Home = ({route, navigation}) => {
                     }}
                 >
                     <Icon size={24} color="black" name="caretleft" />
-                    <Text style={{fontSize: 20, fontWeight: "500", marginLeft: 10}}>Back</Text>
+                    <Text style={{fontSize: 15, fontWeight: "500", marginLeft: 5}}>Back</Text>
                 </TouchableOpacity>
 
                 <TouchableOpacity
@@ -25,10 +25,11 @@ export default Home = ({route, navigation}) => {
                     }}
                 >
                     <Icon size={24} color="black" name="setting" />
+                    <Text style={{fontSize: 15, fontWeight: "500", marginLeft: 5}}>Setting</Text>
                 </TouchableOpacity>
             </View>
 
-            <View>
+            <View style={{flex: 1, width: "100%", justifyContent: "center", alignItems: "center"}}>
                 <Text style={{fontSize: 30}}>Home screen</Text>
                 <Text style={{fontSize: 20}}>Email: <Text>{email}</Text></Text>
             </View>
