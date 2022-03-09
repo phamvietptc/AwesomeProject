@@ -10,9 +10,6 @@ const Stack = createNativeStackNavigator();
 
 export default RootComponent = function() {
     return(
-        //<Login />
-        //<Home />
-        //<Setting />
         <NavigationContainer>
             <Stack.Navigator initialRouteName="Login" screenOptions={{headerShown: false}}>
                 <Stack.Screen name="Login" component={Login} />
