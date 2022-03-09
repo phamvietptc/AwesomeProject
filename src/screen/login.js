@@ -23,7 +23,7 @@ export default Login = ({navigation}) => {
                                 width: "70%",
                                 borderBottomColor: "white",
                                 borderBottomWidth: 1,
-                                textAlign: "right"
+                                textAlign: "left",
                             }}
                                 autoCapitalize="none"
                                 value={getEmail}
@@ -39,8 +39,8 @@ export default Login = ({navigation}) => {
                                 width: "70%",
                                 borderBottomColor: "white",
                                 borderBottomWidth: 1,
-                                textAlign: "right",
-                                paddingRight: 30
+                                textAlign: "left",
+                                paddingRight: 30,
                             }}
                                 autoCapitalize="none"
                                 secureTextEntry={getPasswordvisible? false: true}   
@@ -49,16 +49,16 @@ export default Login = ({navigation}) => {
                                 position: "absolute",
                                 top: 5,
                                 left: 230,
-                                zIndex: 2
+                                zIndex: 2,
                             }}
                                 onPress={() => {
                                     setPasswordvisible(!getPasswordvisible)
                                 }}
                             >
                                 {getPasswordvisible?
-                                <Icon size={24} color="white" name="eye" style={{height: "100%", width: "100%"}} />
+                                <Icon size={21} color="white" name="eye" style={{height: "100%", width: "100%"}} />
                                 :
-                                <Icon size={24} color="white" name="lock" style={{height: "100%", width: "100%"}} />
+                                <Icon size={21} color="white" name="eye-off" style={{height: "100%", width: "100%"}} />
                                 }
                             </TouchableOpacity>
                         </View>

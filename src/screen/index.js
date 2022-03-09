@@ -20,5 +20,5 @@ export default RootComponent = function() {
                 <Stack.Screen name="Setting" component={Setting} />
             </Stack.Navigator>
         </NavigationContainer>
-    )
+    );
 }
