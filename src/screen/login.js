@@ -8,7 +8,7 @@ export default Login = ({navigation}) => {
     const [getPasswordvisible, setPasswordvisible] = useState(false);
     const [getEmail, setEmail] = useState("");
     return(
-        <ImageBackground style={{height: "100%", width: "100%"}} source={require("../images/background.jpg")} resizeMode="stretch">
+        <ImageBackground style={{height: "100%", width: "100%"}} source={require("../images/backgroundlogin.jpg")} resizeMode="stretch">
             <StatusBar barStyle="light-content" />
             <SafeAreaView style={{flex: 1}}>
                 <View style={{height: "100%", width: "100%"}}>
