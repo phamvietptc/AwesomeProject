@@ -9,7 +9,7 @@ import Setting from "./setting";
 const Stack = createNativeStackNavigator();
 
 export default RootComponent = function() {
-    return(
+    return(  
         <NavigationContainer>
             <Stack.Navigator initialRouteName="Login" screenOptions={{headerShown: false}}>
                 <Stack.Screen name="Login" component={Login} />
