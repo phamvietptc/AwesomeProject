@@ -14,43 +14,42 @@ export default Login1 = ({route, navigation}) => {
                 <View style={{height: "100%", width: "100%"}}>
                     {/* Email & password */}
                     <View style={{height: "20%", width: "100%", marginTop: 0.3*windowHeight, alignItems: "center"}}>
-                            {/* Email */}
-                            <View style={{height: 30, flexDirection: "row", alignItems: "center", justifyContent: "space-between"}}>
-                                <Text style={{color: "white", fontSize: 20}}><Text>{email}</Text></Text>
-                            </View>                    
-                    
-                            {/* Password */}
-                            <View style={{width: "70%", height: 30, flexDirection: "row", alignItems: "center", justifyContent: "space-between", marginTop: 10}}>
-                                <Text style={{color: "white"}}>Password</Text>
-                                <TextInput style={{
-                                    color: "white",
-                                    height: "100%",
-                                    width: "70%",
-                                    borderBottomColor: "white",
-                                    borderBottomWidth: 1,
-                                    textAlign: "left",
-                                    paddingRight: 30,
+                        {/* Email */}
+                        <View style={{height: 30, flexDirection: "row", alignItems: "center", justifyContent: "space-between"}}>
+                            <Text style={{color: "white", fontSize: 20}}><Text>{email}</Text></Text>
+                        </View>                    
+                        {/* Password */}
+                        <View style={{width: "70%", height: 30, flexDirection: "row", alignItems: "center", justifyContent: "space-between", marginTop: 10}}>
+                            <Text style={{color: "white"}}>Password</Text>
+                            <TextInput style={{
+                                color: "white",
+                                height: "100%",
+                                width: "70%",
+                                borderBottomColor: "white",
+                                borderBottomWidth: 1,
+                                textAlign: "left",
+                                paddingRight: 30,
+                            }}
+                                autoCapitalize="none"
+                                secureTextEntry={getPasswordvisible? false: true}   
+                            />
+                            <TouchableOpacity style={{
+                                position: "absolute",
+                                top: 5,
+                                left: 230,
+                                zIndex: 2,
+                            }}
+                                onPress={() => {
+                                    setPasswordvisible(!getPasswordvisible)
                                 }}
-                                    autoCapitalize="none"
-                                    secureTextEntry={getPasswordvisible? false: true}   
-                                />
-                                <TouchableOpacity style={{
-                                    position: "absolute",
-                                    top: 5,
-                                    left: 230,
-                                    zIndex: 2,
-                                }}
-                                    onPress={() => {
-                                        setPasswordvisible(!getPasswordvisible)
-                                    }}
-                                >
-                                    {getPasswordvisible?
-                                    <Icon size={21} color="white" name="eye" style={{height: "100%", width: "100%"}} />
-                                    :
-                                    <Icon size={21} color="white" name="eye-off" style={{height: "100%", width: "100%"}} />
-                                    }
-                                </TouchableOpacity>
-                            </View>
+                            >
+                                {getPasswordvisible?
+                                <Icon size={21} color="white" name="eye" style={{height: "100%", width: "100%"}} />
+                                :
+                                <Icon size={21} color="white" name="eye-off" style={{height: "100%", width: "100%"}} />
+                                }
+                            </TouchableOpacity>
+                        </View>
                     </View>
                     {/* Button login & register */}
                     <View style={{height: "20%", width: "100%", marginTop: 0.15*windowHeight, justifyContent: "center", alignItems: "center"}}>

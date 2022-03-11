@@ -29,9 +29,7 @@ export default Login = ({navigation}) => {
                                 onChangeText={setEmail}  
                             />
                         </View>
-                        
                     </View>
-
                     {/* Button login & register */}
                     <View style={{height: "20%", width: "100%", marginTop: 0.15*windowHeight, justifyContent: "center", alignItems: "center"}}>
                             {/* Dang nhap */}
