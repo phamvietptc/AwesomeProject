@@ -5,6 +5,7 @@ const windowWidth = Dimensions.get("window").width;
 const windowHeight = Dimensions.get("window").height;
 
 export default Login = ({navigation}) => {
+    const [getPasswordvisible, setPasswordvisible] = useState(false);
     const [getEmail, setEmail] = useState("");
     return(
         <ImageBackground style={{height: "100%", width: "100%"}} source={require("../images/backgroundlogin.jpg")} resizeMode="stretch">
@@ -29,7 +30,38 @@ export default Login = ({navigation}) => {
                                 onChangeText={setEmail}  
                             />
                         </View>
-                        
+                        {/* Password */}
+                        <View style={{width: "70%", height: 30, flexDirection: "row", alignItems: "center", justifyContent: "space-between", marginTop: 10}}>
+                            <Text style={{color: "white"}}>Password</Text>
+                            <TextInput style={{
+                                color: "white",
+                                height: "100%",
+                                width: "70%",
+                                borderBottomColor: "white",
+                                borderBottomWidth: 1,
+                                textAlign: "left",
+                                paddingRight: 30,
+                            }}
+                                autoCapitalize="none"
+                                secureTextEntry={getPasswordvisible? false: true}   
+                            />
+                            <TouchableOpacity style={{
+                                position: "absolute",
+                                top: 5,
+                                left: 230,
+                                zIndex: 2,
+                            }}
+                                onPress={() => {
+                                    setPasswordvisible(!getPasswordvisible)
+                                }}
+                            >
+                                {getPasswordvisible?
+                                <Icon size={21} color="white" name="eye" style={{height: "100%", width: "100%"}} />
+                                :
+                                <Icon size={21} color="white" name="eye-off" style={{height: "100%", width: "100%"}} />
+                                }
+                            </TouchableOpacity>
+                        </View>
                     </View>
 
                     {/* Button login & register */}
@@ -38,12 +70,12 @@ export default Login = ({navigation}) => {
                             <TouchableOpacity
                                 style={{height: "30%", width: "60%", borderColor: "white", borderWidth: 1, borderRadius: 100, backgroundColor: "#fff", justifyContent: "center", alignItems: "center"}}
                                 onPress={() => {
-                                    navigation.navigate("Login1", {
+                                    navigation.navigate("Home", {
                                         email: getEmail
                                     });
                                 }}
                             >
-                                <Text style={{color: "black", fontSize: 20}}>TIẾP TỤC</Text>
+                                <Text style={{color: "black", fontSize: 20}}>ĐĂNG NHẬP</Text>
                             </TouchableOpacity>
                             {/* Dang ky */}
                             <TouchableOpacity style={{marginTop: 20, height: "30%", width: "60%", borderColor: "white", borderWidth: 1, borderRadius: 100, backgroundColor: "#fff", justifyContent: "center", alignItems: "center"}}>

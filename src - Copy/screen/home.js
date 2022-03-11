@@ -2,7 +2,8 @@ import React, { Component } from "react";
 import { SafeAreaView, View, Text, TouchableOpacity, ImageBackground } from "react-native";
 import Icon from "react-native-vector-icons/FontAwesome";
 
-export default Home = ({navigation}) => {
+export default Home = ({route, navigation}) => {
+    const {email} = route.params;
     return (
         <ImageBackground style={{height: "100%", width: "100%"}} source={require("../images/backgroundhome.jpg")} resizeMode="stretch">
             <SafeAreaView style={{flex: 1}}>
@@ -31,6 +32,7 @@ export default Home = ({navigation}) => {
 
                 <View style={{flex: 1, width: "100%", justifyContent: "center", alignItems: "center"}}>
                     <Text style={{fontSize: 30}}>Home screen</Text>
+                    <Text style={{fontSize: 20}}>Email: <Text>{email}</Text></Text>
                 </View>
             </SafeAreaView>
         </ImageBackground>
