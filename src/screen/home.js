@@ -30,7 +30,7 @@ export default Home = ({navigation}) => {
                 </View>
 
                 <View style={{flex: 1, width: "100%", justifyContent: "center", alignItems: "center"}}>
-                    <Text style={{fontSize: 30}}>Home screen</Text>
+                    <Text style={{fontSize: 30}}>Home</Text>
                 </View>
             </SafeAreaView>
         </ImageBackground>
