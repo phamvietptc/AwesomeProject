@@ -57,7 +57,7 @@ export default Login1 = ({route, navigation}) => {
                             <TouchableOpacity
                                 style={{height: "30%", width: "60%", borderColor: "white", borderWidth: 1, borderRadius: 100, backgroundColor: "#fff", justifyContent: "center", alignItems: "center"}}
                                 onPress={() => {
-                                    navigation.navigate("Home");
+                                    navigation.navigate("HomeTabs");
                                 }}
                             >
                                 <Text style={{color: "black", fontSize: 20}}>ĐĂNG NHẬP</Text>

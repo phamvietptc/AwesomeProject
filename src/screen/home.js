@@ -8,15 +8,7 @@ export default Home = ({navigation}) => {
             <SafeAreaView style={{flex: 1}}>
                 {/* Header */}
                 <View style={{height: "8%", width: "100%", flexDirection: "row", justifyContent: "space-between", alignItems: "center"}}>
-                    <TouchableOpacity
-                        style={{height: "100%", aspectRatio: 1.7, borderWidth: 1, alignItems: "center"}}
-                        onPress={() => {
-                            navigation.goBack()
-                        }}
-                    >
-                        <Icon size={24} color="black" name="caretleft" />
-                        <Text style={{fontSize: 15, fontWeight: "500", marginLeft: 5}}>Back</Text>
-                    </TouchableOpacity>
+                    <View></View>
 
                     <TouchableOpacity
                         style={{height: "100%", aspectRatio: 1.7, borderWidth: 1, alignItems: "center"}}
