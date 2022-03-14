@@ -2,12 +2,12 @@ import React, { Component } from "react";
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { Icon } from "react-native-elements/dist/icons/Icon";
 import Login from "./login";
 import Login1 from "./login1";
 import Home from "./home";
 import Profile from "./profile";
 import Setting from "./setting";
-import { Icon } from "react-native-elements/dist/icons/Icon";
 
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
